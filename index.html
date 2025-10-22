@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile card for Kayode Anointed - Full-stack developer">
+    <title>Profile Card - Kayode Anointed</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/about.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Kayode Anointed</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <article class="profile-card" data-testid="test-profile-card" role="region" aria-label="User profile card for Kayode Anointed">
+
+            <!-- AVATAR SESSION -->
+            <section class="avatar-container" aria-labelledby="profile-heading">
+
+                <!-- Avatar Figure -->
+                <div>
+                    <figure class="avatar-figure">
+                        <img 
+                            src="./assets/avatar.jpg" 
+                            alt="Profile picture of Kayode Anointed" 
+                            class="avatar-img"
+                            data-testid="test-user-avatar"
+                            width="160"
+                            height="160"
+                        >
+                    </figure>
+                </div>
+
+                <!-- Card Content -->
+                <div class="card-content">
+                    <!-- Timestamp -->
+                    <div class="timestamp">
+                        <span class="sr-only">Current timestamp in milliseconds: </span>
+                        <time class="user-time" id="user-time" data-testid="test-user-time" datetime="">
+                            Loading...
+                        </time>
+                    </div>
+
+                    <!-- User Name -->
+                    <header class="user-name">
+                        <h1 id="profile-heading" data-testid="test-user-name">Kayode Anointed</h1>
+                    </header>
+
+                    <!-- User Bio -->
+                    <div>
+                        <p class="user-bio" data-testid="test-user-bio">
+                            Full-stack developer passionate about creating accessible and performant web applications.
+                        </p>
+                    </div>
+
+                    <!-- Social Links Navigation -->
+                    <div>
+                        <nav class="social-nav" aria-label="Social media links">
+                            <ul class="social-links" data-testid="test-user-social-links">
+                                <li>
+                                    <a 
+                                        href="https://twitter.com/anointedkayode" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        class="social-link"
+                                        data-testid="test-user-social-twitter"
+                                        aria-label="Visit Kayode Anointed's Twitter profile (opens in new tab)"
+                                    >
+                                        <img 
+                                            class="social-icon" 
+                                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" 
+                                            alt="Twitter icon" 
+                                            width="24" 
+                                            height="24"
+                                        >
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="https://github.com/Coderio10" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        class="social-link"
+                                        data-testid="test-user-social-github"
+                                        aria-label="Visit Kayode Anointed's GitHub profile (opens in new tab)"
+                                    >
+                                        <img 
+                                            class="social-icon" 
+                                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" 
+                                            alt="GitHub icon" 
+                                            width="24" 
+                                            height="24"
+                                        >
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="https://linkedin.com/in/kayodeanointed" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        class="social-link"
+                                        data-testid="test-user-social-linkedin"
+                                        aria-label="Visit Kayode Anointed's LinkedIn profile (opens in new tab)"
+                                    >
+                                        <img 
+                                            class="social-icon" 
+                                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" 
+                                            alt="LinkedIn icon" 
+                                            width="24" 
+                                            height="24"
+                                        >
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Sections: Hobbies and Dislikes -->
+            <div class="other-section">
+                <!-- Hobbies Section -->
+                <section class="section Hobbies" aria-labelledby="hobbies-heading">
+                    <h2 class="section-title" id="hobbies-heading">Hobbies &amp; Interests</h2>
+                    <ul class="section-list" data-testid="test-user-hobbies">
+                        <li class="section-item">Open source contributions</li>
+                        <li class="section-item">Photography</li>
+                        <li class="section-item">Hiking and outdoor adventures</li>
+                        <li class="section-item">Playing acoustic guitar</li>
+                        <li class="section-item">Reading</li>
+                    </ul>
+                </section>
+
+                <!-- Dislikes Section -->
+                <section class="section" aria-labelledby="dislikes-heading">
+                    <h2 class="section-title" id="dislikes-heading">Pet Peeves</h2>
+                    <ul class="section-list" data-testid="test-user-dislikes">
+                        <li class="section-item">Poorly documented code</li>
+                        <li class="section-item">Unnecessary meetings</li>
+                        <li class="section-item">Slow internet connections</li>
+                        <li class="section-item">Inconsistent code formatting</li>
+                        <li class="section-item">Cold coffee</li>
+                    </ul>
+                </section>
+            </div>
+            
+        </article>
+    </main>
+
+    <!-- JavaScript for Timestamp -->
+    <script>
+        function updateTimestamp() {
+            const timeElement = document.getElementById('user-time');
+            
+            if (timeElement) {
+                const currentTimeMs = Date.now();
+                timeElement.textContent = currentTimeMs;
+                timeElement.setAttribute('datetime', new Date(currentTimeMs).toISOString());
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updateTimestamp);
+        } else {
+            updateTimestamp();
+        }
+
+        function ensureLinkSecurity() {
+            const externalLinks = document.querySelectorAll('a[target="_blank"]');
+            
+            externalLinks.forEach(link => {
+                const currentRel = link.getAttribute('rel') || '';
+                
+                if (!currentRel.includes('noopener')) {
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', ensureLinkSecurity);
+        } else {
+            ensureLinkSecurity();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Kayode Anointed - Get in touch">
+    <title>Contact Us - Kayode Anointed</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Kayode Anointed</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                <li><a href="About.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="contact-main">
+        <div class="contact-container">
+            <header class="contact-header">
+                <h1>Get In Touch</h1>
+                <p>Have a question or want to work together? I'd love to hear from you.</p>
+            </header>
+
+            <form class="contact-form" id="contactForm" novalidate aria-labelledby="form-heading">
+                <h2 id="form-heading" class="sr-only">Contact Form</h2>
+
+                <!-- Success Message -->
+                <div 
+                    class="success-message" 
+                    id="successMessage" 
+                    data-testid="test-contact-success" 
+                    role="alert" 
+                    aria-live="polite"
+                    style="display: none;"
+                >
+                    <svg class="success-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                        <strong>Message sent successfully!</strong>
+                        <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                    </div>
+                </div>
+
+                <!-- Full Name Field -->
+                <div class="form-group">
+                    <label for="contactName" class="form-label">
+                        Full Name <span class="required" aria-label="required">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="contactName" 
+                        name="name" 
+                        class="form-input"
+                        data-testid="test-contact-name"
+                        aria-required="true"
+                        aria-describedby="nameError"
+                        autocomplete="name"
+                    >
+                    <span 
+                        class="error-message" 
+                        id="nameError" 
+                        data-testid="test-contact-error-name"
+                        role="alert"
+                    ></span>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="contactEmail" class="form-label">
+                        Email Address <span class="required" aria-label="required">*</span>
+                    </label>
+                    <input 
+                        type="email" 
+                        id="contactEmail" 
+                        name="email" 
+                        class="form-input"
+                        data-testid="test-contact-email"
+                        aria-required="true"
+                        aria-describedby="emailError"
+                        autocomplete="email"
+                    >
+                    <span 
+                        class="error-message" 
+                        id="emailError" 
+                        data-testid="test-contact-error-email"
+                        role="alert"
+                    ></span>
+                </div>
+
+                <!-- Subject Field -->
+                <div class="form-group">
+                    <label for="contactSubject" class="form-label">
+                        Subject <span class="required" aria-label="required">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="contactSubject" 
+                        name="subject" 
+                        class="form-input"
+                        data-testid="test-contact-subject"
+                        aria-required="true"
+                        aria-describedby="subjectError"
+                    >
+                    <span 
+                        class="error-message" 
+                        id="subjectError" 
+                        data-testid="test-contact-error-subject"
+                        role="alert"
+                    ></span>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="contactMessage" class="form-label">
+                        Message <span class="required" aria-label="required">*</span>
+                    </label>
+                    <textarea 
+                        id="contactMessage" 
+                        name="message" 
+                        class="form-textarea"
+                        data-testid="test-contact-message"
+                        aria-required="true"
+                        aria-describedby="messageError messageHelp"
+                        rows="6"
+                    ></textarea>
+                    <span class="help-text" id="messageHelp">Minimum 10 characters</span>
+                    <span 
+                        class="error-message" 
+                        id="messageError" 
+                        data-testid="test-contact-error-message"
+                        role="alert"
+                    ></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                    type="submit" 
+                    class="submit-button"
+                    data-testid="test-contact-submit"
+                >
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="contact-footer">
+        <p>&copy; 2025 Kayode Anointed. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get form and elements
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        // Form fields
+        const nameInput = document.getElementById('contactName');
+        const emailInput = document.getElementById('contactEmail');
+        const subjectInput = document.getElementById('contactSubject');
+        const messageInput = document.getElementById('contactMessage');
+        
+        // Error message elements
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const subjectError = document.getElementById('subjectError');
+        const messageError = document.getElementById('messageError');
+
+        /**
+         * Validates a required text field
+         */
+        function validateRequired(input, errorElement, fieldName) {
+            const value = input.value.trim();
+            
+            if (!value) {
+                showError(input, errorElement, `${fieldName} is required`);
+                return false;
+            }
+            
+            clearError(input, errorElement);
+            return true;
+        }
+
+        /**
+         * Validates email format
+         */
+        function validateEmail(input, errorElement) {
+            const value = input.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!value) {
+                showError(input, errorElement, 'Email is required');
+                return false;
+            }
+            
+            if (!emailRegex.test(value)) {
+                showError(input, errorElement, 'Please enter a valid email address');
+                return false;
+            }
+            
+            clearError(input, errorElement);
+            return true;
+        }
+
+        /**
+         * Validates message length
+         */
+        function validateMessage(input, errorElement) {
+            const value = input.value.trim();
+            
+            if (!value) {
+                showError(input, errorElement, 'Message is required');
+                return false;
+            }
+            
+            if (value.length < 10) {
+                showError(input, errorElement, 'Message must be at least 10 characters');
+                return false;
+            }
+            
+            clearError(input, errorElement);
+            return true;
+        }
+
+        /**
+         * Shows error message and applies error styling
+         */
+        function showError(input, errorElement, message) {
+            errorElement.textContent = message;
+            input.classList.add('error');
+            input.setAttribute('aria-invalid', 'true');
+        }
+
+        /**
+         * Clears error message and styling
+         */
+        function clearError(input, errorElement) {
+            errorElement.textContent = '';
+            input.classList.remove('error');
+            input.setAttribute('aria-invalid', 'false');
+        }
+
+        /**
+         * Real-time validation on input blur
+         */
+        nameInput.addEventListener('blur', () => {
+            validateRequired(nameInput, nameError, 'Full name');
+        });
+
+        emailInput.addEventListener('blur', () => {
+            validateEmail(emailInput, emailError);
+        });
+
+        subjectInput.addEventListener('blur', () => {
+            validateRequired(subjectInput, subjectError, 'Subject');
+        });
+
+        messageInput.addEventListener('blur', () => {
+            validateMessage(messageInput, messageError);
+        });
+
+        /**
+         * Clear errors on input
+         */
+        [nameInput, emailInput, subjectInput, messageInput].forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.classList.contains('error')) {
+                    const errorElement = document.getElementById(input.getAttribute('aria-describedby').split(' ')[0]);
+                    clearError(input, errorElement);
+                }
+            });
+        });
+
+        /**
+         * Form submission handler
+         */
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Hide success message if visible
+            successMessage.style.display = 'none';
+            
+            // Validate all fields
+            const isNameValid = validateRequired(nameInput, nameError, 'Full name');
+            const isEmailValid = validateEmail(emailInput, emailError);
+            const isSubjectValid = validateRequired(subjectInput, subjectError, 'Subject');
+            const isMessageValid = validateMessage(messageInput, messageError);
+            
+            // Check if all validations passed
+            if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+                // Show success message
+                successMessage.style.display = 'flex';
+                
+                // Reset form
+                form.reset();
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+                // Focus on success message for screen readers
+                successMessage.focus();
+                
+                // Optional: Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            } else {
+                // Focus on first error
+                const firstError = form.querySelector('.error');
+                if (firstError) {
+                    firstError.focus();
+                }
+            }
+        });
+
+        // Prevent default HTML5 validation
+        form.setAttribute('novalidate', 'true');
+    </script>
+</body>
+</html>
