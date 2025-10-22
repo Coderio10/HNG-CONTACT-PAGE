@@ -112,9 +112,10 @@ profile-card/
 ├── index.html          # Home page with profile card
 ├── contact.html        # Contact form page
 ├── about.html          # About me page
-├── style.css           # Home page styles
-├── contact.css         # Contact page styles
-├── about.css           # About page styles
+├── styles/
+    ├── style.css           # Home page styles
+    ├── contact.css         # Contact page styles
+    └── about.css           # About page styles
 ├── assets/
 │   ├── avatar.jpg      # Profile image
 │   └── [other assets]
